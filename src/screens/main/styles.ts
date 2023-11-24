@@ -63,4 +63,3 @@ export const InputWrapper = styled.View`
 export const Input = styled.TextInput.attrs({})`
 `;
 
-export const Button = styled.Button``;

@@ -1,8 +1,6 @@
 import React from "react";
 
-import { Container, Header, Input, InputWrapper, Title, Button, Icon, Divider, ListInfoContainer } from "./styles";
-import { SafeAreaView } from "react-native-safe-area-context";
-import {  } from "../../components/InformationLabel/styles";
+import { Container, Header, Input, InputWrapper, Title, Icon, Divider, ListInfoContainer } from "./styles";
 import { InformationLabel } from "../../components/InformationLabel";
 
 export const Main = () => {
