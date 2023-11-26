@@ -25,7 +25,7 @@ export const Shadow = styled.View`
   width: ${RFValue(350)}px;
   border-radius: 20px;
   margin-left: 10px;
-  margin-top: -58px;
+  margin-top: ${RFValue(-58)}px;
 `;
 
 export const ActionButton  = styled.TouchableOpacity``
