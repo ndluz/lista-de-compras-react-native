@@ -8,15 +8,12 @@ export const Content = styled.View`
   border-radius: 20px;
   z-index: 1;
   justify-content: center;
+  border: 2px solid black;
 `;
 
-export const Container = styled.TouchableOpacity.attrs({
-  activeOpacity: -30,
-  delayPressOut: -10,
-  delayPressIn: -30,
-})`
+export const Container = styled.View`
   width: ${RFValue(300)}px;
-  height: 60px;
+  height: ${RFValue(60)}px;
   background-color: red;
   border-radius: 20px;
   z-index: 1;

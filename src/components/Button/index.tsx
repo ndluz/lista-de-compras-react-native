@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Content, Shadow, TextButton } from "./styles";
+import { TouchableOpacity } from "react-native";
 
 interface IProps {
   text: string;
@@ -10,7 +11,9 @@ export const Button = ({ text }: IProps) => {
   return (
     <Container>
       <Content>
-        <TextButton>{text}</TextButton>
+        <TouchableOpacity>
+          <TextButton>{text}</TextButton>
+        </TouchableOpacity>
       </Content>
       <Shadow />
     </Container>
