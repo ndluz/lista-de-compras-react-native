@@ -1,17 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import { Container, Icon, Shadow } from './styles';
-import { TouchableOpacity } from "react-native";
+import { Container, Content, Icon, Shadow } from "./styles";
 
-export const  AddItem = () => {
+export const AddItem = () => {
   return (
     <>
-    <Container>
-      <TouchableOpacity>
-        <Icon name="plus" />
-      </TouchableOpacity>
-    </Container>
-    <Shadow />
+      <Container>
+        <Content>
+          <Icon name='plus' />
+        </Content>
+      </Container>
+      <Shadow />
     </>
-  )
-}
+  );
+};

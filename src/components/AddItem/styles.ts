@@ -12,6 +12,12 @@ export const Container = styled.View`
   justify-content: center;
 `;
 
+export const Content = styled.TouchableOpacity`
+  width: ${RFValue(60)}px;
+  height: ${RFValue(60)}px;
+  justify-content: center;
+`;
+
 export const Shadow = styled.View`
   width: ${RFValue(60)}px;
   height: ${RFValue(60)}px;
