@@ -1,10 +1,16 @@
 import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
 
-export const Content = styled.View`
-  width: ${RFValue(300)}px;
+import { Dimensions } from "react-native";
+
+interface IContentProps {
+  color: string;
+}
+
+export const Content = styled.View<IContentProps>`
+  width: ${RFValue(300, Dimensions.get('window').height)}px;
   height: ${RFValue(60)}px;
-  background-color: #E24330;
+  background-color: ${({color}) => color};
   border-radius: 20px;
   z-index: 1;
   justify-content: center;
@@ -12,20 +18,20 @@ export const Content = styled.View`
 `;
 
 export const Container = styled.View`
-  width: ${RFValue(300)}px;
+  width: ${RFValue(300, Dimensions.get('window').height)}px;
+  
   height: ${RFValue(60)}px;
-  background-color: red;
   border-radius: 20px;
   z-index: 1;
 `;
 export const Shadow = styled.View`
-  width: ${RFValue(300)}px;
-  height: 60px;
+  width: ${RFValue(300, Dimensions.get('window').height)}px;
+  height: ${RFValue(60)}px;
   background-color: black;
   border-radius: 20px;
 
   margin-left: 8px;
-  margin-top: -50px;
+  margin-top:  ${RFValue(-55)}px;
 `;
 
 export const TextButton = styled.Text`

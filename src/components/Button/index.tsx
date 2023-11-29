@@ -4,13 +4,14 @@ import { TouchableOpacity } from "react-native";
 
 interface IProps {
   text: string;
+  color: string;
   action?: () => void;
 }
 
-export const Button = ({ text }: IProps) => {
+export const Button = ({ text, color, action }: IProps) => {
   return (
     <Container>
-      <Content>
+      <Content color={color}>
         <TouchableOpacity>
           <TextButton>{text}</TextButton>
         </TouchableOpacity>
