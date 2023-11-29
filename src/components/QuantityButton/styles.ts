@@ -2,12 +2,15 @@ import styled from "styled-components/native";
 import { Feather } from "@expo/vector-icons";
 import { RFValue } from "react-native-responsive-fontsize";
 
+import { Dimensions } from "react-native";
+
 
 interface IContainerProps {
   type: 'add' | 'remove'
 }
 export const Container = styled.View<IContainerProps>`
-  width: ${RFValue(95)}px;
+
+  width: ${RFValue(95, Dimensions.get('window').height)}px;
   height: ${RFValue(55)}px;
   background-color: ${({ type }) => type === 'add' ? '#0CCA4A' : '#E24330'};
   border-radius: 50px;
@@ -18,13 +21,15 @@ export const Container = styled.View<IContainerProps>`
 `;
 
 export const Content = styled.TouchableOpacity`
-  width: ${RFValue(95)}px;
+  width: ${RFValue(95, Dimensions.get('window').height)}px;
+  
   height: ${RFValue(55)}px;
   justify-content: center;
 `;
 
 export const Shadow = styled.View`
-  width: ${RFValue(95)}px;
+  width: ${RFValue(95, Dimensions.get('window').height)}px;
+  
   height: ${RFValue(55)}px;
   background-color: #000;
   border-radius: 50px;
