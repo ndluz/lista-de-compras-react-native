@@ -1,10 +1,10 @@
 import styled from "styled-components/native";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
-import { Dimensions } from "react-native";
+import { Dimensions, TextInputProps } from "react-native";
 
-export const Container = styled.TextInput`
-  width: ${RFValue(340, Dimensions.get('window').height)}px;
+export const Container = styled.TextInput<TextInputProps>`
+  width: ${RFValue(300, Dimensions.get('window').height)}px;
   background: #fff;
   height: ${RFValue(50)}px;
   border-radius: 20px;
@@ -21,10 +21,12 @@ export const Container = styled.TextInput`
   padding-left: 20px;
   padding-right: 20px;
 
+  font-size: 16px;
+
 `;
 
 export const Shadow = styled.View`
-  width: ${RFValue(340, Dimensions.get('window').height)}px;
+  width: ${RFValue(300, Dimensions.get('window').height)}px;
   
   
   background: black;

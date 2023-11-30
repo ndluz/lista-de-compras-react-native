@@ -20,7 +20,7 @@ export const Content = styled.View<IContentProps>`
 
 export const Shadow = styled.View<IContentProps>`
   margin-left: 5px;
-  margin-top: -33px;
+  margin-top: ${RFValue(-33)}px;
   width: ${({ type }) => (type === "COUNT" ? RFValue(120) : RFValue(200))}px;
   background-color: #000;
   height: ${RFValue(40)}px;

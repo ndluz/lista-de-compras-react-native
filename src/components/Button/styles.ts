@@ -9,7 +9,7 @@ interface IContentProps {
 
 export const Content = styled.View<IContentProps>`
   width: ${RFValue(300, Dimensions.get('window').height)}px;
-  height: ${RFValue(60)}px;
+  height: ${RFValue(45)}px;
   background-color: ${({color}) => color};
   border-radius: 20px;
   z-index: 1;
@@ -20,23 +20,23 @@ export const Content = styled.View<IContentProps>`
 export const Container = styled.View`
   width: ${RFValue(300, Dimensions.get('window').height)}px;
   
-  height: ${RFValue(60)}px;
+  height: ${RFValue(45)}px;
   border-radius: 20px;
   z-index: 1;
 `;
 export const Shadow = styled.View`
   width: ${RFValue(300, Dimensions.get('window').height)}px;
-  height: ${RFValue(60)}px;
+  height: ${RFValue(45)}px;
   background-color: black;
   border-radius: 20px;
 
-  margin-left: 8px;
-  margin-top:  ${RFValue(-55)}px;
+  margin-left: 5px;
+  margin-top:  ${RFValue(-40)}px;
 `;
 
 export const TextButton = styled.Text`
   text-align: center;
-  font-size: ${RFValue(24)}px;
+  font-size: ${RFValue(18)}px;
   font-weight: bold;
   color: white;
 `;
