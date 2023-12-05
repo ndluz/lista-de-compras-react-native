@@ -12,7 +12,7 @@ export const Button = ({ text, color, action }: IProps) => {
   return (
     <Container>
       <Content color={color}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={action} style={{width: '100%'}}>
           <TextButton>{text}</TextButton>
         </TouchableOpacity>
       </Content>
