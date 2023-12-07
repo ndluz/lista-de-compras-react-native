@@ -32,3 +32,10 @@ export const Icon = styled(Feather)`
   font-size: ${RFValue(17)}px;
   color: #fff;
 `;
+
+export const Wrapper = styled.View`
+  width: ${RFValue(60)}px;
+  height: ${RFValue(60)}px;
+  border-radius: 50px;
+  
+`;
