@@ -9,19 +9,26 @@ import {
   Shadow,
   ActionButton,
 } from "./styles";
+import { IShopItem } from "../../screens/main";
 
-export const ListItem = () => {
+interface IProps {
+  item: IShopItem;
+  handlePurchaseAction: (item: IShopItem) => void;
+  handleCancelAction: () => void;
+}
+
+export const ListItem = ({ item,  handleCancelAction, handlePurchaseAction,  }: IProps) => {
   return (
     <>
-      <Container>
+      <Container key={item.id} purchased={item.purchased}>
         <ItemSeparator>
-          <ItemText>Café</ItemText>
+          <ItemText purchased={item.purchased}>{`${item.quantity}x  ${item.itemName}` }</ItemText>
         </ItemSeparator>
         <ItemSeparator>
-          <ActionButton>
-            <RemoveIcon name='x' />
+          <ActionButton onPress={handleCancelAction}>
+            <RemoveIcon name='x'  />
           </ActionButton>
-          <ActionButton>
+          <ActionButton   disabled={item.purchased} onPress={ () => handlePurchaseAction(item)}>
             <ConfirmIcon name='check' />
           </ActionButton>
         </ItemSeparator>
