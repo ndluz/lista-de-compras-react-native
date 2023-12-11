@@ -11,7 +11,7 @@ export const Container = styled.TextInput<TextInputProps>`
   border: 2px solid black;
   z-index: 1;
 
-  font-size: ${RFValue(16)};  
+  font-size: ${RFValue(16)}px;  
   color: #282725;
   font-weight: 500;
 

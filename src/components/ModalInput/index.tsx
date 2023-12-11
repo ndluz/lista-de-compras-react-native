@@ -12,10 +12,10 @@ interface IProps extends TextInputProps {
   placeholder: string;
 }
 
-export const ModalInput = ({ placeholder }: IProps ) => {
+export const ModalInput = ({ placeholder, ...rest }: IProps ) => {
   return (
     <Wrapper>
-      <Container placeholder={placeholder}>
+      <Container placeholder={placeholder} {...rest}>
       </Container>
       <Shadow />
     </Wrapper>
