@@ -23,8 +23,8 @@ export const Shadow = styled.View`
   height: ${RFValue(60)}px;
   background-color: #000;
   border-radius: 50px;
-  margin-top: ${RFValue(-55)}px;
-  margin-left: ${RFValue(5)}px;
+  margin-top: ${RFValue(-58)}px;
+  margin-left: ${RFValue(2)}px;
 `;
 
 export const Icon = styled(Feather)`
