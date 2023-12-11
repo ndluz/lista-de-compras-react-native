@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "lista-de-compras",
+    "name": "lista de compras",
     "slug": "lista-de-compras",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ndluz.listadecompras"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2c803bc4-ea30-40ec-85fb-5b8d74b2162b"
+      }
     }
   }
 }
