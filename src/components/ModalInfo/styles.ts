@@ -18,10 +18,11 @@ export const Container = styled.View`
   align-items: center;
 `;
 
-export const InfoText = styled.Text`
+export const InfoText = styled.TextInput`
   font-size: ${RFValue(16)}px;
   color: #282725;
   font-weight: bold;
+  text-align: center;
 `;
 
 export const Shadow = styled.View`
