@@ -21,6 +21,7 @@ import { ConfirmItemModal } from "../confirmItemModal";
 import { Button } from "../../components/Button";
 import { ListItem } from "../../components/ListItem";
 import { View } from 'react-native'
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export interface IShopItem {
   id: number;
@@ -42,16 +43,38 @@ export const Main = () => {
   const [itemSelected, setItemSelected] = useState<IShopItem>({id:0, purchased: false, itemName: '', price: 0, quantity: 0});
   const [info, setInfo] = useState<IInfo>({countItem:0, total:0});
 
+  useEffect(() => {
+    getData()
+}, []);
+
   useEffect(() =>{
     let count = 0;
-
     listItem.forEach(item => {
       count += item.quantity;
-     
     })
-
     setInfo({countItem: count, total: info.total})
+    storeData(listItem)
   }, [listItem])
+
+  async function storeData(data: IShopItem[]){
+    try {
+      await AsyncStorage.setItem('listadecompras', JSON.stringify(data))
+    } catch (error) {
+      alert('Houve um erro ao tentar salvar seus dados');
+      console.log(error)
+    }
+  }
+
+  async function getData(){
+    try {
+      const data = await AsyncStorage.getItem('listadecompras');
+      if (data != null) {
+        setListItem(JSON.parse(data));
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   function handleAddItemModal() {
     setAddItemModal((visibility) => !visibility);
