@@ -19,7 +19,7 @@ export const ConfirmItemModal = ({ item,  cancelAction, saveBalance, updateItem 
   function itemBalance(id: number, price: String) {
     saveBalance(Number(price) * item.quantity);
     cancelAction();
-    updateItem(String(id), Number(price))
+    updateItem(String(id), Number(Number(price).toFixed(2)));
   }
 
   return (
