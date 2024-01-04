@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components/native";
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
+import { RFValue } from "react-native-responsive-fontsize";
 import { Feather } from "@expo/vector-icons";
 import { Dimensions } from "react-native";
 
@@ -37,11 +37,12 @@ export const ItemSeparator = styled.View`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px
+  gap: 20px;
+  max-width: ${RFValue(180)}px;
 `;
 
 export const ItemText = styled.Text<IProps>`
-  text-align: center;
+  text-align: left;
   font-size: ${RFValue(18)}px;
   font-weight: 500;
   ${({purchased}) => purchased && css`
